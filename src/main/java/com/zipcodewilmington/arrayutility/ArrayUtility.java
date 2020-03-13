@@ -68,6 +68,13 @@ public class ArrayUtility<T> {
     }
 
     public T[] removeValue(T valueToRemove) {
-        return null;
+        T[] arrWithOut = (T[]) Array.newInstance(valueToRemove.getClass(), array.length - getNumberOfOccurrences(valueToRemove));
+        int index = 0;
+        for (int i = 0; i < array.length ; i++) {
+            if (!array[i].equals(valueToRemove)){
+                arrWithOut[index++] = array[i];
+            }
+            }
+        return arrWithOut;
     }
 }
