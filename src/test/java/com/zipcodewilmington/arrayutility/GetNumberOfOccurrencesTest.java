@@ -62,7 +62,7 @@ public class GetNumberOfOccurrencesTest {
         ArrayUtility<Object> arrayUtility = new ArrayUtility<Object>(inputArray);
 
         // When
-        Integer actual = arrayUtility.getNumberOfOccurrences(valueToEvaluate);
+        Object actual = arrayUtility.getNumberOfOccurrences(valueToEvaluate);
 
         // Then
         Assert.assertEquals(expected, actual);
